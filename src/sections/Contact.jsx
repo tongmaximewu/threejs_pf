@@ -1,5 +1,5 @@
 import emailjs from '@emailjs/browser';
-import { useRef, useState } from 'react';
+import { useRef, useState, useEffect } from 'react';
 
 import useAlert from '../hooks/useAlert.js';
 import Alert from '../components/Alert.jsx';
@@ -12,56 +12,58 @@ const Contact = () => {
 
   const [form, setForm] = useState({ name: '', email: '', message: '' });
 
+  // Initialize EmailJS
+  useEffect(() => {
+    emailjs.init("IZ1SDCTtcTt7WzbvP"); // Replace with your actual public key
+  }, []);
+
   const handleChange = ({ target: { name, value } }) => {
     setForm({ ...form, [name]: value });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     setLoading(true);
 
-    emailjs
-      .send(
-        import.meta.env.VITE_APP_EMAILJS_SERVICE_ID,
-        import.meta.env.VITE_APP_EMAILJS_TEMPLATE_ID,
-        {
-          from_name: form.name,
-          to_name: 'Tong Maxime Wu',
-          from_email: form.email,
-          to_email: 'twunit01@gmail.com',
-          message: form.message,
-        },
-        import.meta.env.VITE_APP_EMAILJS_PUBLIC_KEY,
-      )
-      .then(
-        () => {
-          setLoading(false);
-          showAlert({
-            show: true,
-            text: 'Thank you for your message 😃',
-            type: 'success',
-          });
-
-          setTimeout(() => {
-            hideAlert(false);
-            setForm({
-              name: '',
-              email: '',
-              message: '',
-            });
-          }, [3000]);
-        },
-        (error) => {
-          setLoading(false);
-          console.error(error);
-
-          showAlert({
-            show: true,
-            text: "I didn't receive your message 😢",
-            type: 'danger',
-          });
-        },
+    try {
+      // Use sendForm instead of send to handle the form submission
+      const result = await emailjs.sendForm(
+        'service_c5pc3oj', // Your service ID
+        'template_t0b5gxj', // Your template ID
+        formRef.current,
+        'IZ1SDCTtcTt7WzbvP'  // Your public key
       );
+
+      if (result.status === 200) {
+        setLoading(false);
+        showAlert({
+          show: true,
+          text: 'Thank you for your message 😃',
+          type: 'success',
+        });
+
+        // Reset form
+        setForm({
+          name: '',
+          email: '',
+          message: '',
+        });
+
+        // Hide alert after 3 seconds
+        setTimeout(() => {
+          hideAlert();
+        }, 3000);
+      }
+    } catch (error) {
+      setLoading(false);
+      console.error('EmailJS Error:', error);
+      
+      showAlert({
+        show: true,
+        text: error.text || "Failed to send message. Please try again later 😢",
+        type: 'danger',
+      });
+    }
   };
 
   return (
