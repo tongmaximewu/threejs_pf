@@ -21,49 +21,15 @@ export const navLinks = [
     },
   ];
   
-  export const clientReviews = [
-    {
-      id: 1,
-      name: 'Emily Johnson',
-      position: 'Marketing Director at GreenLeaf',
-      img: 'assets/review1.png',
-      review:
-        'Working with Adrian was a fantastic experience. He transformed our outdated website into a modern, user-friendly platform. His attention to detail and commitment to quality are unmatched. Highly recommend him for any web dev projects.',
-    },
-    {
-      id: 2,
-      name: 'Mark Rogers',
-      position: 'Founder of TechGear Shop',
-      img: 'assets/review2.png',
-      review:
-        'Adrian’s expertise in web development is truly impressive. He delivered a robust and scalable solution for our e-commerce site, and our online sales have significantly increased since the launch. He’s a true professional! Fantastic work.',
-    },
-    {
-      id: 3,
-      name: 'John Dohsas',
-      position: 'Project Manager at UrbanTech ',
-      img: 'assets/review3.png',
-      review:
-        'I can’t say enough good things about Adrian. He was able to take our complex project requirements and turn them into a seamless, functional website. His problem-solving abilities are outstanding.',
-    },
-    {
-      id: 4,
-      name: 'Ether Smith',
-      position: 'CEO of BrightStar Enterprises',
-      img: 'assets/review4.png',
-      review:
-        'Adrian was a pleasure to work with. He understood our requirements perfectly and delivered a website that exceeded our expectations. His skills in both frontend backend dev are top-notch.',
-    },
-  ];
   
   export const myProjects = [
     {
-      title: 'Podcastr - AI Podcast Platform',
-      desc: 'Podcastr is a revolutionary Software-as-a-Service platform that transforms the way podcasts are created. With advanced AI-powered features like text-to-multiple-voices functionality, it allows creators to generate diverse voiceovers from a single text input.',
+      title: 'WORLDbyme',
+      desc: 'WORLDbyme is an innovative platform that allows users to explore and interact with a vast collection of virtual cities. By leveraging advanced mapping technologies like Leaflet and Turf, it has generated over 50 unique cities, each populated with more than 1,000 interactive elements. This rich environment not only enhances user engagement but also optimizes rendering performance by 60%, ensuring a smooth experience even on resource-limited devices.',
       subdesc:
-        'Built as a unique Software-as-a-Service app with Next.js 14, Tailwind CSS, TypeScript, Framer Motion and Convex, Podcastr is designed for optimal performance and scalability.',
-      href: 'https://www.youtube.com/watch?v=zfAb95tJvZQ',
-      texture: '/textures/project/project1.mp4',
+        'The platform is built using React.js and C++, focusing on providing an intuitive interface for users to navigate through dynamic urban landscapes. WORLDbyme empowers users to explore, learn, and create within these virtual environments, making it an ideal tool for urban planners, educators, and gaming enthusiasts alike.',
+      href: 'https://github.com/tongmaximewu/myWorld',
+      texture: '/textures/project/WORLDbyme.mp4',
       logo: '/assets/project-logo1.png',
       logoStyle: {
         backgroundColor: '#2A1816',
@@ -84,23 +50,23 @@ export const navLinks = [
         },
         {
           id: 3,
-          name: 'TypeScript',
-          path: '/assets/typescript.png',
+          name: 'C++',
+          path: '/assets/cpp.png',
         },
         {
           id: 4,
-          name: 'Framer Motion',
-          path: '/assets/framer.png',
+          name: 'HTML',
+          path: '/assets/html.png',
         },
       ],
     },
     {
-      title: 'LiveDoc - Real-Time Google Docs Clone',
-      desc: 'LiveDoc is a powerful collaborative app that elevates the capabilities of real-time document editing. As an enhanced version of Google Docs, It supports millions of collaborators simultaneously, ensuring that every change is captured instantly and accurately.',
+      title: 'BlackJack Trainer',
+      desc: 'The BlackJack Trainer is a cutting-edge tool designed to help users sharpen their Blackjack skills with pinpoint accuracy. Utilizing React.js, HTML, CSS, Java, and MySQL, this application offers a 100% accurate training experience, enabling players to practice their strategies and improve their decision-making in real-time. Its user-friendly interface ensures that players can easily track their progress and refine their gameplay.',
       subdesc:
-        'With LiveDoc, users can experience the future of collaboration, where multiple contributors work together in real time without any lag, by using Next.js and Liveblocks newest features.',
-      href: 'https://www.youtube.com/watch?v=y5vE8y_f_OM',
-      texture: '/textures/project/project2.mp4',
+        'With an extensive database of scenarios and outcomes, the BlackJack Trainer provides personalized feedback and tips to enhance players\' understanding of the game. Whether you\'re a novice looking to learn the basics or an experienced player aiming to perfect your strategies, this trainer serves as an essential companion for mastering Blackjack.',
+      href: 'https://github.com/dazhuox/blackjack-trainer',
+      texture: '/textures/project/bj.mp4',
       logo: '/assets/project-logo2.png',
       logoStyle: {
         backgroundColor: '#13202F',
@@ -132,17 +98,15 @@ export const navLinks = [
       ],
     },
     {
-      title: 'CarePulse - Health Management System',
-      desc: 'An innovative healthcare platform designed to streamline essential medical processes. It simplifies patient registration, appointment scheduling, and medical record management, providing a seamless experience for both healthcare providers and patients.',
+      title: 'CoachMe | DawHacks 24’',
+      desc: 'CoachMe is an innovative fitness application that generates personalized workout plans tailored to individual user needs. Built with React.js and integrated with a robust Exercises API, it offers over 20 unique workouts that cater to various fitness levels and goals. The platform emphasizes accessibility and ease of use, allowing users to quickly find workouts that fit their schedules and preferences.',
       subdesc:
-        'With a focus on efficiency, CarePulse integrantes complex forms and SMS notifications, by using Next.js, Appwrite, Twillio and Sentry that enhance operational workflows.',
-      href: 'https://www.youtube.com/watch?v=lEflo_sc82g',
-      texture: '/textures/project/project3.mp4',
+        'This dynamic tool not only fosters a more engaging workout experience but also encourages users to stay motivated and track their fitness journey. By personalizing workouts based on user input, CoachMe helps individuals achieve their health and fitness objectives effectively and efficiently.',
+      href: 'https://github.com/tongmaximewu/coachMe', // Replace with the actual link
+      texture: '/textures/project/fit.mp4',
       logo: '/assets/project-logo3.png',
       logoStyle: {
         backgroundColor: '#60f5a1',
-        background:
-          'linear-gradient(0deg, #60F5A150, #60F5A150), linear-gradient(180deg, rgba(255, 255, 255, 0.9) 0%, rgba(208, 213, 221, 0.8) 100%)',
         border: '0.2px solid rgba(208, 213, 221, 1)',
         boxShadow: '0px 0px 60px 0px rgba(35, 131, 96, 0.3)',
       },
@@ -153,95 +117,63 @@ export const navLinks = [
           name: 'React.js',
           path: '/assets/react.svg',
         },
-        {
-          id: 2,
-          name: 'TailwindCSS',
-          path: 'assets/tailwindcss.png',
-        },
+
         {
           id: 3,
-          name: 'TypeScript',
-          path: '/assets/typescript.png',
+          name: 'HTML',
+          path: '/assets/html.png',
         },
         {
           id: 4,
-          name: 'Framer Motion',
-          path: '/assets/framer.png',
+          name: 'CSS',
+          path: '/assets/css.png',
         },
       ],
     },
     {
-      title: 'Horizon - Online Banking Platform',
-      desc: 'Horizon is a comprehensive online banking platform that offers users a centralized finance management dashboard. It allows users to connect multiple bank accounts, monitor real-time transactions, and seamlessly transfer money to other users.',
+      title: 'SolitaireCipher',
+      desc: 'SolitaireCipher is a groundbreaking encryption tool that leverages a custom Solitaire algorithm to securely process text at an impressive speed of 1,000 characters per second. Developed using Java, the tool boasts a remarkable accuracy rate of 99.9%, making it a reliable choice for secure communications. Additionally, it has reduced code complexity by 25%, ensuring maintainability and efficiency in its operations.',
       subdesc:
-        'Built with Next.js 14 Appwrite, Dwolla and Plaid, Horizon ensures a smooth and secure banking experience, tailored to meet the needs of modern consumers.',
-      href: 'https://www.youtube.com/watch?v=PuOVqP_cjkE',
-      texture: '/textures/project/project4.mp4',
+        'The application is designed for users who require a secure method of encrypting and decrypting sensitive information. By combining robust encryption techniques with a user-friendly interface, SolitaireCipher empowers individuals and organizations to protect their data with confidence.',
+      href: 'https://github.com/tongmaximewu/solitaireCipher', // Replace with the actual link
+      texture: '/textures/project/soli.mp4',
       logo: '/assets/project-logo4.png',
-      logoStyle: {
-        backgroundColor: '#0E1F38',
-        border: '0.2px solid #0E2D58',
-        boxShadow: '0px 0px 60px 0px #2F67B64D',
-      },
-      spotlight: '/assets/spotlight4.png',
-      tags: [
-        {
-          id: 1,
-          name: 'React.js',
-          path: '/assets/react.svg',
-        },
-        {
-          id: 2,
-          name: 'TailwindCSS',
-          path: 'assets/tailwindcss.png',
-        },
-        {
-          id: 3,
-          name: 'TypeScript',
-          path: '/assets/typescript.png',
-        },
-        {
-          id: 4,
-          name: 'Framer Motion',
-          path: '/assets/framer.png',
-        },
-      ],
-    },
-    {
-      title: 'Imaginify - AI Photo Manipulation App',
-      desc: 'Imaginify is a groundbreaking Software-as-a-Service application that empowers users to create stunning photo manipulations using AI technology. With features like AI-driven image editing, a payments system, and a credits-based model.',
-      subdesc:
-        'Built with Next.js 14, Cloudinary AI, Clerk, and Stripe, Imaginify combines cutting-edge technology with a user-centric approach. It can be turned into a side income or even a full-fledged business.',
-      href: 'https://www.youtube.com/watch?v=Ahwoks_dawU',
-      texture: '/textures/project/project5.mp4',
-      logo: '/assets/project-logo5.png',
       logoStyle: {
         backgroundColor: '#1C1A43',
         border: '0.2px solid #252262',
         boxShadow: '0px 0px 60px 0px #635BFF4D',
       },
+      spotlight: '/assets/spotlight4.png',
+      tags: [
+        {
+          id: 1,
+          name: 'Java',
+          path: '/assets/java.png',
+        },
+
+      ],
+    },
+    {
+      title: 'Gambyte (Chess Bot) | CodeJam 23’',
+      desc: 'Gambyte is an intelligent chess bot that enhances the strategic gameplay experience by utilizing advanced algorithms like alpha-beta pruning and Minimax. Built with Python, this chess bot can analyze the board and generate up to eight successive best moves, providing users with insights and strategies to improve their own game. Its sophisticated decision-making capabilities simulate high-level competition, making it a valuable tool for both casual players and serious chess enthusiasts.',
+      subdesc:
+        'Designed to adapt to various skill levels, Gambyte offers a dynamic and challenging opponent for users to practice against. By learning from each match, it helps players refine their tactics and deepen their understanding of the game, fostering a more engaging and educational chess experience.',
+      href: 'https://github.com/tongmaximewu/chessengine', // Replace with the actual link
+      texture: '/textures/project/chess.mp4',
+      logo: '/assets/project-logo5.png',
+      logoStyle: {
+        backgroundColor: '#0E1F38',
+        border: '0.2px solid #0E2D58',
+        boxShadow: '0px 0px 60px 0px #2F67B64D',
+      },
       spotlight: '/assets/spotlight5.png',
       tags: [
         {
           id: 1,
-          name: 'React.js',
-          path: '/assets/react.svg',
+          name: 'Python',
+          path: '/assets/python.png',
         },
-        {
-          id: 2,
-          name: 'TailwindCSS',
-          path: 'assets/tailwindcss.png',
-        },
-        {
-          id: 3,
-          name: 'TypeScript',
-          path: '/assets/typescript.png',
-        },
-        {
-          id: 4,
-          name: 'Framer Motion',
-          path: '/assets/framer.png',
-        },
+
       ],
     },
   ];
@@ -260,29 +192,12 @@ export const navLinks = [
   export const workExperiences = [
     {
       id: 1,
-      name: 'Framer',
-      pos: 'Lead Web Developer',
-      duration: '2022 - Present',
-      title: "Framer serves as my go-to tool for creating interactive prototypes. I use it to bring designs to  life, allowing stakeholders to experience the user flow and interactions before development.",
-      icon: '/assets/framer.svg',
+      name: 'eSportium',
+      pos: 'Full Stack Developer Intern',
+      duration: 'Summer 2024',
+      title: 'As a Full Stack Developer Intern at eSportium, I utilized JavaScript, React, and Next.js to develop and optimize scalable web applications. I successfully implemented new features and refactored existing code, significantly reducing technical debt and improving performance. My collaboration with cross-functional teams led to enhanced platform features and a notable increase in daily active users. Additionally, I designed and integrated RESTful APIs to streamline data flow and reduce database queries.',
+      icon: '/assets/e.svg',
       animation: 'victory',
     },
-    {
-      id: 2,
-      name: 'Figma',
-      pos: 'Web Developer',
-      duration: '2020 - 2022',
-      title: "Figma is my collaborative design platform of choice. I utilize it to work seamlessly with team members and clients, facilitating real-time feedback and design iterations. Its cloud-based.",
-      icon: '/assets/figma.svg',
-      animation: 'clapping',
-    },
-    {
-      id: 3,
-      name: 'Notion',
-      pos: 'Junior Web Developer',
-      duration: '2019 - 2020',
-      title: "Notion helps me keep my projects organized. I use it for project management, task tracking, and as a central hub for documentation, ensuring that everything from design notes to.",
-      icon: '/assets/notion.svg',
-      animation: 'salute',
-    },
   ];
+  

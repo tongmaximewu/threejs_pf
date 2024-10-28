@@ -1,5 +1,3 @@
-
-
 import React, { useEffect, useRef } from 'react';
 import { useGraph } from '@react-three/fiber';
 import { useAnimations, useFBX, useGLTF } from '@react-three/drei';
@@ -32,6 +30,28 @@ const Developer = ({ animationName = 'idle', ...props }) => {
     return () => actions[animationName].fadeOut(0.5);
   }, [animationName]);
 
+  // Modify material properties for customization
+  useEffect(() => {
+    // Hide glasses by setting visible to false
+    nodes.Wolf3D_Glasses.visible = false;
+
+    // Change eye color to brown
+    if (materials.Wolf3D_Eye) {
+      materials.Wolf3D_Eye.color.set('#6A4E42');  // Brown color
+    }
+
+    // Optional: Customize outfit colors
+    if (materials.Wolf3D_Outfit_Top) {
+      materials.Wolf3D_Outfit_Top.color.set('#3333FF'); // Blue top, as an example
+    }
+    if (materials.Wolf3D_Outfit_Bottom) {
+      materials.Wolf3D_Outfit_Bottom.color.set('#FF5733'); // Orange bottom, as an example
+    }
+    if (materials.Wolf3D_Outfit_Footwear) {
+      materials.Wolf3D_Outfit_Footwear.color.set('#2E2E2E'); // Dark footwear
+    }
+  }, [materials, nodes]);
+
   return (
     <group ref={group} {...props} dispose={null}>
       <primitive object={nodes.Hips} />
@@ -39,11 +59,6 @@ const Developer = ({ animationName = 'idle', ...props }) => {
         geometry={nodes.Wolf3D_Hair.geometry}
         material={materials.Wolf3D_Hair}
         skeleton={nodes.Wolf3D_Hair.skeleton}
-      />
-      <skinnedMesh
-        geometry={nodes.Wolf3D_Glasses.geometry}
-        material={materials.Wolf3D_Glasses}
-        skeleton={nodes.Wolf3D_Glasses.skeleton}
       />
       <skinnedMesh
         geometry={nodes.Wolf3D_Body.geometry}
